@@ -1,5 +1,38 @@
-EESchema Schematic File Version 4
-EELAYER 30 0
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:OLED_Interface14pin-cache
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -14,7 +47,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L conn:Conn_01x14_Male J2
+L Conn_01x14_Male J2
 U 1 1 59B27B6E
 P 8750 3300
 F 0 "J2" H 8750 4000 50  0000 C CNN
@@ -25,7 +58,7 @@ F 3 "" H 8750 3300 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L device:C C6
+L C C6
 U 1 1 59B27D86
 P 8200 2650
 F 0 "C6" H 8225 2750 50  0000 L CNN
@@ -36,7 +69,7 @@ F 3 "" H 8200 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C4
+L C C4
 U 1 1 59B27DF9
 P 7900 2850
 F 0 "C4" H 7925 2950 50  0000 L CNN
@@ -63,7 +96,7 @@ Wire Wire Line
 Wire Wire Line
 	8100 2700 7900 2700
 $Comp
-L device:C C3
+L C C3
 U 1 1 59B27E5A
 P 7650 3150
 F 0 "C3" H 7675 3250 50  0000 L CNN
@@ -74,7 +107,7 @@ F 3 "" H 7650 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C1
+L C C1
 U 1 1 59B27E98
 P 7200 3150
 F 0 "C1" H 7225 3250 50  0000 L CNN
@@ -89,19 +122,19 @@ Wire Wire Line
 Wire Wire Line
 	7800 3100 7800 3000
 Wire Wire Line
-	7800 3000 7650 3000
+	7800 3000 6550 3000
 Connection ~ 7650 3000
 Wire Wire Line
-	7200 3300 7650 3300
+	7200 3300 8550 3300
 Connection ~ 7650 3300
 NoConn ~ 8550 3200
 Wire Wire Line
 	8550 3400 7450 3400
 $Comp
-L power1:+3V3 #PWR02
+L +3V3 #PWR2
 U 1 1 59B27F48
 P 6550 3000
-F 0 "#PWR02" H 6550 2850 50  0001 C CNN
+F 0 "#PWR2" H 6550 2850 50  0001 C CNN
 F 1 "+3V3" H 6550 3140 50  0000 C CNN
 F 2 "" H 6550 3000 50  0001 C CNN
 F 3 "" H 6550 3000 50  0001 C CNN
@@ -109,7 +142,7 @@ F 3 "" H 6550 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C2
+L C C2
 U 1 1 59B27F69
 P 7600 4050
 F 0 "C2" H 7625 4150 50  0000 L CNN
@@ -120,7 +153,7 @@ F 3 "" H 7600 4050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C5
+L C C5
 U 1 1 59B28031
 P 8000 4150
 F 0 "C5" H 8025 4250 50  0000 L CNN
@@ -131,11 +164,11 @@ F 3 "" H 8000 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8550 4000 8300 4000
+	8550 4000 8000 4000
 Wire Wire Line
 	8550 3900 7600 3900
 $Comp
-L device:R R3
+L R R3
 U 1 1 59B280C1
 P 7250 4150
 F 0 "R3" V 7330 4150 50  0000 C CNN
@@ -150,15 +183,15 @@ Wire Wire Line
 Wire Wire Line
 	7250 3800 7250 4000
 Wire Wire Line
-	7250 4300 7600 4300
+	7250 4300 8300 4300
 Wire Wire Line
-	7600 4200 7600 4300
+	7600 4200 7600 4350
 Connection ~ 7600 4300
 $Comp
-L power1:GND #PWR04
+L GND #PWR4
 U 1 1 59B281B7
 P 7600 4350
-F 0 "#PWR04" H 7600 4100 50  0001 C CNN
+F 0 "#PWR4" H 7600 4100 50  0001 C CNN
 F 1 "GND" H 7600 4200 50  0000 C CNN
 F 2 "" H 7600 4350 50  0001 C CNN
 F 3 "" H 7600 4350 50  0001 C CNN
@@ -166,10 +199,10 @@ F 3 "" H 7600 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power1:GND #PWR03
+L GND #PWR3
 U 1 1 59B2824B
 P 7200 3300
-F 0 "#PWR03" H 7200 3050 50  0001 C CNN
+F 0 "#PWR3" H 7200 3050 50  0001 C CNN
 F 1 "GND" H 7200 3150 50  0000 C CNN
 F 2 "" H 7200 3300 50  0001 C CNN
 F 3 "" H 7200 3300 50  0001 C CNN
@@ -180,7 +213,7 @@ Connection ~ 7200 3300
 Text Notes 6900 4200 0    60   ~ 0
 560K\n
 $Comp
-L device:C C7
+L C C7
 U 1 1 59B2842B
 P 8300 4150
 F 0 "C7" H 8325 4250 50  0000 L CNN
@@ -193,7 +226,7 @@ $EndComp
 Connection ~ 8000 4300
 Connection ~ 8300 4000
 $Comp
-L device:R R4
+L R R4
 U 1 1 59B28675
 P 8200 3500
 F 0 "R4" V 8280 3500 50  0000 C CNN
@@ -206,9 +239,9 @@ $EndComp
 Wire Wire Line
 	8550 3500 8350 3500
 Wire Wire Line
-	7050 3500 7450 3500
+	7050 3500 8050 3500
 $Comp
-L conn:Conn_01x04 J1
+L Conn_01x04 J1
 U 1 1 59B288FC
 P 6300 3700
 F 0 "J1" H 6300 3900 50  0000 C CNN
@@ -219,7 +252,7 @@ F 3 "" H 6300 3700 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L device:R R1
+L R R1
 U 1 1 59B28986
 P 6700 3250
 F 0 "R1" V 6780 3250 50  0000 C CNN
@@ -230,7 +263,7 @@ F 3 "" H 6700 3250 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L device:R R2
+L R R2
 U 1 1 59B289E6
 P 6900 3250
 F 0 "R2" V 6980 3250 50  0000 C CNN
@@ -249,21 +282,21 @@ Connection ~ 6900 3000
 Wire Wire Line
 	6900 3700 8550 3700
 Wire Wire Line
-	6900 3400 6900 3500
+	6900 3400 6900 3700
 Wire Wire Line
 	6900 3500 6500 3500
 Wire Wire Line
-	6500 3600 6700 3600
+	6500 3600 8550 3600
 Wire Wire Line
 	6500 3700 6550 3700
 Wire Wire Line
 	6550 3700 6550 3000
 Connection ~ 6700 3000
 $Comp
-L power1:GND #PWR01
+L GND #PWR1
 U 1 1 59B28B90
 P 6500 3800
-F 0 "#PWR01" H 6500 3550 50  0001 C CNN
+F 0 "#PWR1" H 6500 3550 50  0001 C CNN
 F 1 "GND" H 6500 3650 50  0000 C CNN
 F 2 "" H 6500 3800 50  0001 C CNN
 F 3 "" H 6500 3800 50  0001 C CNN
@@ -285,58 +318,4 @@ Text Label 6950 3600 0    60   ~ 0
 SCL
 Text Label 7150 3700 0    60   ~ 0
 SDA
-Wire Wire Line
-	7650 3000 7200 3000
-Wire Wire Line
-	7650 3300 8550 3300
-Wire Wire Line
-	7600 4300 8000 4300
-Wire Wire Line
-	7600 4300 7600 4350
-Wire Wire Line
-	8000 4300 8300 4300
-Wire Wire Line
-	8300 4000 8000 4000
-Wire Wire Line
-	7200 3000 7050 3000
-Wire Wire Line
-	6900 3000 6700 3000
-Wire Wire Line
-	6700 3000 6550 3000
-Wire Wire Line
-	6700 3600 8550 3600
-Wire Wire Line
-	6900 3500 6900 3700
-Wire Wire Line
-	7050 3000 6900 3000
-Wire Wire Line
-	7450 3500 8050 3500
-Text Label 8400 3500 0    50   ~ 0
-RST
-$Comp
-L device:C C8
-U 1 1 60F057A7
-P 7500 2600
-F 0 "C8" V 7750 2500 50  0000 L CNN
-F 1 "1uf" V 7650 2500 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0402_NoSilk" H 7538 2450 50  0001 C CNN
-F 3 "" H 7500 2600 50  0001 C CNN
-	1    7500 2600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power1:GND #PWR0101
-U 1 1 60F05BAF
-P 7650 2600
-F 0 "#PWR0101" H 7650 2350 50  0001 C CNN
-F 1 "GND" H 7650 2450 50  0000 C CNN
-F 2 "" H 7650 2600 50  0001 C CNN
-F 3 "" H 7650 2600 50  0001 C CNN
-	1    7650 2600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7350 2600 7150 2600
-Text Label 7150 2600 0    50   ~ 0
-RST
 $EndSCHEMATC
